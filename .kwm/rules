@@ -12,6 +12,7 @@ kwmc rule owner="Android Studio" properties={space="3"}
 kwmc rule owner="qemu-system-x86_64" properties={role="AXDialog" float="true"}
 kwmc rule owner="qemu-system-i386" properties={role="AXDialog" float="true"}
 kwmc rule owner="Android Emulator" properties={role="AXDialog" float="true"}
+kwmc rule owner="Vysor" properties={role="AXDialog" float="true"}
 
 #Music applications should start on space 4
 kwmc rule owner="Google Play Music Desktop Player" properties={space="4"}
