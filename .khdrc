@@ -47,4 +47,4 @@ lalt - return        : open -nb com.googlecode.iterm2
 
 ## Reload window layout if broken
 #lalt + shift - r   :   brew services restart kwm
-#lalt + shift + cmd - r :   brew services restart khd1
+#lalt + shift + cmd - r :   brew services restart khd
