@@ -1,8 +1,8 @@
 # toggle split mode
 lalt - s : kwmc window -c split-mode toggle
 
-lalt - v : kwmc display -c vertical
-lalt - h : kwmc display -c horizontal
+#lalt - v : kwmc display -c vertical
+#lalt - h : kwmc display -c horizontal
 
 
 # toggle fullscreen
@@ -32,15 +32,15 @@ lalt + shift - k    :   kwmc window -s south
 lalt + shift - 0xf6    :   kwmc window -s west
 
 # Move Focused Window To Screen
-alt + shift - 1 :    kwmc window -m space 1
-alt + shift - 2 :    kwmc window -m space 2
-alt + shift - 3 :    kwmc window -m space 3
-alt + shift - 4 :    kwmc window -m space 4
-alt + shift - 5 :    kwmc window -m space 5
-alt + shift - 6 :    kwmc window -m space 6
-alt + shift - 7 :    kwmc window -m space 7
-alt + shift - 8 :    kwmc window -m space 8
-alt + shift - 9 :    kwmc window -m space 9
+lalt + shift - 1 :    kwmc window -m space 1
+lalt + shift - 2 :    kwmc window -m space 2
+lalt + shift - 3 :    kwmc window -m space 3
+lalt + shift - 4 :    kwmc window -m space 4
+lalt + shift - 5 :    kwmc window -m space 5
+lalt + shift - 6 :    kwmc window -m space 6
+lalt + shift - 7 :    kwmc window -m space 7
+lalt + shift - 8 :    kwmc window -m space 8
+lalt + shift - 9 :    kwmc window -m space 9
 
 ## Open new terminal window
 lalt - return        : open -nb com.googlecode.iterm2

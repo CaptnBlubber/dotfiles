@@ -1,0 +1,73 @@
+- defaults:
+    link:
+      create: true
+      force: true
+
+- clean:
+    ~/.config:
+      force: true
+
+
+- link:
+  # kwm & khd
+    ~/.kwm/: kwm/
+    ~/.khdrc: khd/.khdrc
+  #contains ascii art used for neofetch
+    ~/.ascii: ascii/
+  #Kitty
+    ~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
+  
+
+- tap:
+  - caskroom/cask
+  - caskroom/fonts
+  - caskroom/versions
+  - buo/cask-upgrade
+  - koekeishiya/formulae
+
+- brew:
+  - htop
+  - neofetch
+  - the_silver_searcher
+  - khd
+  - kwm
+
+- cask: [
+    #JDK
+    java8,
+
+    #Übersicht to display "polybar" like widget 
+    ubersicht,
+
+    # Android development related
+    android-studio,
+    android-studio-preview,
+    vysor,
+    fastlane,
+    zeplin
+
+    #fonts
+    font-sourcecodepro-nerd-font,
+    font-roboto-mono-for-powerline,
+    
+    # Terminal.
+    iterm2,
+    kitty
+    
+    #Messaging clients
+    slack,
+
+    #docker related
+    docker,
+    kitematic,
+  
+    #music
+    google-play-music-desktop-player,
+
+    #Editors
+    visual-studio-code
+  ]
+
+- shell:
+  - ["git submodule update --init --recursive", Installing submodules]
+

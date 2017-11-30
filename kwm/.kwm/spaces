@@ -1,0 +1,18 @@
+kwmc config space 0 1 name " Private"
+kwmc config space 0 2 name " Web"
+kwmc config space 0 3 name " Chat"
+kwmc config space 0 4 name " Code"
+kwmc config space 0 5 name " Musik"
+kwmc config space 0 6 name " Terminal"
+
+kwmc rule owner="studio" properties={space="code"}
+
+kwmc rule owner="Code" properties={space="code"}
+kwmc rule owner="Electron" properties={space="code"}
+kwmc rule owner="Visual Studio Code" properties={space="code"}
+
+kwmc rule owner="Microsoft Outlook" properties={space="mail"}
+
+kwmc rule owner="Slack" properties={space="chat"}
+
+kwmc rule owner="Google Play Music Desktop Player" properties={space="music"}

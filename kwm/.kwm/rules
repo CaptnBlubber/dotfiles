@@ -1,6 +1,7 @@
 kwmc rule owner="iTerm2" properties={role="AXDialog"}
 kwmc rule owner="Finder" properties={role="AXDialog"}
 kwmc rule owner="Finder" role="AXDialog" properties={float="true"}
+kwmc rule owner="Cisco WebEx Meeting Center" role="AXDialog" properties={float="true"}
 kwmc rule owner="System Preferences" properties={float="true"}
 
 #Chat applications should start on space 2
@@ -8,11 +9,10 @@ kwmc rule owner="Slack" properties={space="2"}
 kwmc rule owner="HipChat" properties={space="2"}
 
 #Android Development Applications should start on space 3
-kwmc rule owner="Android Studio" properties={space="3"}
+
+kwmc rule owner="Android Studio" except=".* - \[.*" properties={float="true"}
 kwmc rule owner="qemu-system-x86_64" properties={role="AXDialog" float="true"}
 kwmc rule owner="qemu-system-i386" properties={role="AXDialog" float="true"}
 kwmc rule owner="Android Emulator" properties={role="AXDialog" float="true"}
 kwmc rule owner="Vysor" properties={role="AXDialog" float="true"}
 
-#Music applications should start on space 4
-kwmc rule owner="Google Play Music Desktop Player" properties={space="4"}
