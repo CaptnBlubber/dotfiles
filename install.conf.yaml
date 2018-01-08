@@ -7,6 +7,8 @@
     ~/.config:
       force: true
 
+- shell:
+  - ["git submodule update --init --recursive", Installing submodules]
 
 - link:
   # kwm & khd
@@ -14,8 +16,16 @@
     ~/.khdrc: khd/.khdrc
   #contains ascii art used for neofetch
     ~/.ascii: ascii/
+  #zsh/prezto setup
+    ~/.zprezto: prezto
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc
   #Kitty
-    ~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
+    #~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
   
 
 - tap:
@@ -52,7 +62,7 @@
     
     # Terminal.
     iterm2,
-    kitty
+    # kitty TODO
     
     #Messaging clients
     slack,
@@ -67,7 +77,4 @@
     #Editors
     visual-studio-code
   ]
-
-- shell:
-  - ["git submodule update --init --recursive", Installing submodules]
 
