@@ -23,7 +23,7 @@
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: prezto/runcoms/zshrc
     ~/.colors: colors/
-  #vim 
+  #vim
     ~/.vim: vim/
     ~/.vimrc: vimrc
 
@@ -42,20 +42,23 @@
   - buo/cask-upgrade
   - koekeishiya/formulae
 
+- brew:
+  - vim --with-lua
+
 - brew: [
   htop,
   ranger,
   neofetch,
   the_silver_searcher,
   khd,
-  kwm
+  kwm,
 ]
-  
+
 - cask: [
     #JDK
     java8,
 
-    #Übersicht to display "polybar" like widget 
+    #Übersicht to display "polybar" like widget
     ubersicht,
 
     # Android development related
@@ -68,18 +71,18 @@
     #fonts
     font-sourcecodepro-nerd-font,
     font-roboto-mono-for-powerline,
-    
+
     # Terminal.
     iterm2,
     # kitty TODO
-    
+
     #Messaging clients
     slack,
 
     #docker related
     docker,
     kitematic,
-  
+
     #music
     google-play-music-desktop-player,
 
