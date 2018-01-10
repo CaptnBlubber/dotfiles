@@ -1,11 +1,8 @@
 - defaults:
     link:
-      create: true
-      force: true
+      relink: true
 
-- clean:
-    ~/.config:
-      force: true
+- clean: ['~']
 
 - shell:
   - ["git submodule update --init --recursive", Installing submodules]
@@ -18,15 +15,25 @@
     ~/.ascii: ascii/
   #zsh/prezto setup
     ~/.zprezto: prezto
+    ~/.zprezto-custom: prezto-custom #contains our custom scripts
     ~/.zlogin: prezto/runcoms/zlogin
     ~/.zlogout: prezto/runcoms/zlogout
-    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zpreztorc: zpreztorc #Overwrite with our custom
     ~/.zprofile: prezto/runcoms/zprofile
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: prezto/runcoms/zshrc
+    ~/.colors: colors/
+  #vim 
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+
   #Kitty
     #~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
-  
+
+
+- shell:
+  - ["vim +PluginInstall +qall", Installing vim plugins]
+  - ["./macos", Installing mac-os customs]
 
 - tap:
   - caskroom/cask
@@ -35,13 +42,15 @@
   - buo/cask-upgrade
   - koekeishiya/formulae
 
-- brew:
-  - htop
-  - neofetch
-  - the_silver_searcher
-  - khd
-  - kwm
-
+- brew: [
+  htop,
+  ranger,
+  neofetch,
+  the_silver_searcher,
+  khd,
+  kwm
+]
+  
 - cask: [
     #JDK
     java8,
