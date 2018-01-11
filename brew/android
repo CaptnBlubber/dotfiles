@@ -1,0 +1,3 @@
+tap "caskroom/cask"
+cask "android-studio"
+cask "caskroom/versions/android-studio-preview"

@@ -3,3 +3,7 @@ tags
 *.swp
 .VimballRecord
 view
+
+!bundle/
+bundle/*
+!bundle/Vundle.vim

@@ -3,7 +3,7 @@
 set -e
 
 #TODO: Multi OS
-#OS=$(uname)
+OS=$(uname)
 #CONFIG="$OS.conf.yaml"
 
 CONFIG="install.conf.yaml"
@@ -15,4 +15,5 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+#[[ "$OS" = "Darwin" ]] && 
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-brew -c "${CONFIG}" "${@}"

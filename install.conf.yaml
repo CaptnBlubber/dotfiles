@@ -4,13 +4,13 @@
 
 - clean: ['~']
 
-- shell:
-  - ["git submodule update --init --recursive", Installing submodules]
+- brewfile:
+    - Brewfile
 
 - link:
   # kwm & khd
     ~/.kwm/: kwm/
-    ~/.khdrc: khd/.khdrc
+    ~/.khdrc: khd/khdrc
   #contains ascii art used for neofetch
     ~/.ascii: ascii/
   #zsh/prezto setup
@@ -22,6 +22,7 @@
     ~/.zprofile: prezto/runcoms/zprofile
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: prezto/runcoms/zshrc
+    ~/.zprezto-scripts: prezto-scripts/
     ~/.colors: colors/
   #vim
     ~/.vim: vim/
@@ -30,63 +31,10 @@
   #Kitty
     #~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
 
-
 - shell:
-  - ["vim +PluginInstall +qall", Installing vim plugins]
-  - ["./macos", Installing mac-os customs]
-
-- tap:
-  - caskroom/cask
-  - caskroom/fonts
-  - caskroom/versions
-  - buo/cask-upgrade
-  - koekeishiya/formulae
-
-- brew:
-  - vim --with-lua
-
-- brew: [
-  htop,
-  ranger,
-  neofetch,
-  the_silver_searcher,
-  khd,
-  kwm,
-]
-
-- cask: [
-    #JDK
-    java8,
-
-    #Übersicht to display "polybar" like widget
-    ubersicht,
-
-    # Android development related
-    android-studio,
-    android-studio-preview,
-    vysor,
-    fastlane,
-    zeplin
-
-    #fonts
-    font-sourcecodepro-nerd-font,
-    font-roboto-mono-for-powerline,
-
-    # Terminal.
-    iterm2,
-    # kitty TODO
-
-    #Messaging clients
-    slack,
-
-    #docker related
-    docker,
-    kitematic,
-
-    #music
-    google-play-music-desktop-player,
-
-    #Editors
-    visual-studio-code
-  ]
+    - ["git submodule update --init --recursive", Installing submodules]
+    - command: ["vim +PluginInstall +qall", Installing vim Plugins]
+      stdin: false
+      stdout: true
+    - ["./macos", Installing mac-os customs]
 
