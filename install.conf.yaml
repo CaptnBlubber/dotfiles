@@ -24,23 +24,25 @@
   #vim
     ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.brewfiles: brew/
   #git
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
-
   #wallpapers
     ~/wallpapers: wallpapers/
 
+  #TODO Übersicht Widgets
+
   #Kitty
-    #~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
+    ~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
 
 - brewfile:
-    - Brewfile
+    - brew/Brewfile
+    - brew/android
 
 - shell:
     - ["git submodule update --init --recursive", Installing submodules]
-    - command: ["vim +PluginInstall +qall", Installing vim Plugins]
-      stdin: false
-      stdout: true
-    - ["./macos", Installing mac-os customs]
+    - ["vim +PluginInstall +qall", Installing vim Plugins]
+    - ["brew services start --all", "Starting KWM and KHD"]
+    #- ["./macos", Installing mac-os customs]
 
