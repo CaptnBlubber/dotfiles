@@ -4,15 +4,18 @@ kwmc config space 0 3 name " Chat"
 kwmc config space 0 4 name " Code"
 kwmc config space 0 5 name " Musik"
 kwmc config space 0 6 name " Terminal"
+kwmc config space 0 7 name " Mail"
 
-kwmc rule owner="studio" properties={space="code"}
+kwmc rule owner="studio" properties={display="0"; space="4"}
 
-kwmc rule owner="Code" properties={space="code"}
-kwmc rule owner="Electron" properties={space="code"}
-kwmc rule owner="Visual Studio Code" properties={space="code"}
+kwmc rule owner="Code" properties={display="0"; space="4"}
+kwmc rule owner="Electron" properties={display="0"; space="4"}
+kwmc rule owner="Visual Studio Code" properties={display="0"; space="4"}
 
-kwmc rule owner="Microsoft Outlook" properties={space="mail"}
+kwmc rule owner="Microsoft Outlook" properties={display="0"; space="7"}
 
-kwmc rule owner="Slack" properties={space="chat"}
+kwmc rule owner="Slack" properties{display="0"; space="3"}
+kwmc rule owner="Rocket.Chat+" properties{display="0"; space="3"}
 
-kwmc rule owner="Google Play Music Desktop Player" properties={space="music"}
+
+kwmc rule owner="Google Play Music Desktop Playe" properties={display="0"; space="5"}

@@ -4,12 +4,9 @@
 
 - clean: ['~']
 
-- brewfile:
-    - Brewfile
-
 - link:
   # kwm & khd
-    ~/.kwm/: kwm/
+    ~/.kwm: kwm/
     ~/.khdrc: khd/khdrc
   #contains ascii art used for neofetch
     ~/.ascii: ascii/
@@ -27,9 +24,18 @@
   #vim
     ~/.vim: vim/
     ~/.vimrc: vimrc
+  #git
+    ~/.gitignore: git/gitignore
+    ~/.gitconfig: git/gitconfig
+
+  #wallpapers
+    ~/wallpapers: wallpapers/
 
   #Kitty
     #~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
+
+- brewfile:
+    - Brewfile
 
 - shell:
     - ["git submodule update --init --recursive", Installing submodules]
