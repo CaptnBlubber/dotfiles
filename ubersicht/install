@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Change the plugins directory
+defaults write tracesOf.Uebersicht NSNavLastRootDirectory -string "~/.uebersicht/"
+
+#Disable auto updates for Übersicht
+defaults write tracesOf.Uebersicht SUEnableAutomaticChecks 0
+
+#Disable sending of profile
+defaults write tracesOf.Uebersicht SUSendProfileInfo 0
+
+#This will prevent Übersicht to overwrite our custom settings
+defaults write tracesOf.Uebersicht SUHasLaunchedBefore 1
+

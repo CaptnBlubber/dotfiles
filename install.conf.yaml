@@ -4,6 +4,9 @@
 
 - clean: ['~']
 
+- shell:
+    - ["git submodule update --init --recursive", Installing submodules]
+
 - link:
   # kwm & khd
     ~/.kwm: kwm/
@@ -32,17 +35,24 @@
     ~/wallpapers: wallpapers/
 
   #TODO Übersicht Widgets
+    ~/.uebersicht/polybar:
+      force: true
+      create: true
+      path: ubersicht/polybar
 
   #Kitty
-    ~/Library/Preferences/kitty/kitty.conf: kitty/kitty.conf
+    ~/Library/Preferences/kitty/kitty.conf: 
+      force: true
+      create: true
+      path: kitty/kitty.conf
 
 - brewfile:
     - brew/Brewfile
     - brew/android
 
 - shell:
-    - ["git submodule update --init --recursive", Installing submodules]
     - ["vim +PluginInstall +qall", Installing vim Plugins]
-    - ["brew services start --all", "Starting KWM and KHD"]
-    #- ["./macos", Installing mac-os customs]
+    - ["brew services restart --all", "Starting KWM and KHD"]
+    - ["ubersicht/install", Installing Übersicht plugin]
+    - ["./macos", Installing mac-os customs]
 
