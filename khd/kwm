@@ -8,7 +8,7 @@ lalt - s : kwmc window -c split-mode toggle
 # toggle fullscreen
 lalt - f : kwmc window -z fullscreen
 
-# Give Focus To Screen
+# Give Focus To Screen kwm
 lalt - 1            :    kwmc space -fExperimental 1
 lalt - 2            :    kwmc space -fExperimental 2
 lalt - 3            :    kwmc space -fExperimental 3
@@ -19,19 +19,20 @@ lalt - 7            :    kwmc space -fExperimental 7
 lalt - 8            :    kwmc space -fExperimental 8
 lalt - 9            :    kwmc space -fExperimental 9
 
-## Shift focus
-lalt - l    :   kwmc window -f north
-lalt - j    :   kwmc window -f east
-lalt - k    :   kwmc window -f south
-lalt - 0xf6    :   kwmc window -f west
-
-## Swap position
+# Swap windows kwm
 lalt + shift - l    :   kwmc window -s north
 lalt + shift - j    :   kwmc window -s east
 lalt + shift - k    :   kwmc window -s south
 lalt + shift - 0xf6    :   kwmc window -s west
 
-# Move Focused Window To Screen
+
+# Give focus to windows kwm
+lalt - l    :   kwmc window -f north
+lalt - j    :   kwmc window -f east
+lalt - k    :   kwmc window -f south
+lalt - 0xf6    :   kwmc window -f west
+
+# Send window to desktop kwm
 lalt + shift - 1 :    kwmc window -m space 1
 lalt + shift - 2 :    kwmc window -m space 2
 lalt + shift - 3 :    kwmc window -m space 3

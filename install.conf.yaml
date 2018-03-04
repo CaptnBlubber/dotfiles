@@ -8,9 +8,9 @@
     - ["git submodule update --init --recursive", Installing submodules]
 
 - link:
-  # kwm & khd
-    ~/.kwm: kwm/
-    ~/.khdrc: khd/khdrc
+  # chunkwm & khd
+    ~/.chunkwmrc: chunkwm/chunkwmrc
+    ~/.khdrc: khd/chunkwm
   #contains ascii art used for neofetch
     ~/.ascii: ascii/
   #zsh/prezto setup
@@ -52,7 +52,7 @@
 
 - shell:
     - ["vim +PluginInstall +qall", Installing vim Plugins]
-    - ["brew services restart --all", "Starting KWM and KHD"]
+    - ["brew services restart --all", "Starting chunkwm and khd"]
     - ["ubersicht/install", Installing Übersicht plugin]
     - ["./macos", Installing mac-os customs]
 

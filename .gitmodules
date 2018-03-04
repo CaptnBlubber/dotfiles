@@ -13,3 +13,4 @@
 [submodule "ubersicht/polybar"]
 	path = ubersicht/polybar
 	url = https://github.com/CaptnBlubber/Polybar-kwm.git
+	branch = chunkwm
