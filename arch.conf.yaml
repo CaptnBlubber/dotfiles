@@ -1,0 +1,87 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+# Shell
+
+- pacaur:
+    - zsh
+    - nerd-fonts-source-code-pro
+    - neofetch
+
+- link:
+  #contains ascii art used for neofetch
+    ~/.ascii: ascii/
+  #zsh/prezto setup
+    ~/.zprezto: prezto
+    ~/.zprezto-custom: prezto-custom #contains our custom scripts
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: zpreztorc #Overwrite with our custom
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc
+    ~/.zprezto-scripts: prezto-scripts/
+
+# xorg
+
+- pacaur:
+        - xorg-xinit
+
+- link:
+        ~/.xinitrc: xinitrc
+
+#i3 Window Manager
+
+- pacaur:
+        - i3-gaps
+        - dmenu
+        - i3-blocks
+
+- link:
+        ~/.config/i3/config: i3/config
+        ~/.i3: i3/
+        ~/.config/rofi/config: rofi/config
+
+# terminal
+
+- pacaur:
+        - terminator
+
+- link:
+        ~/.config/terminator: terminator
+
+#vim
+
+- pacaur:
+    - vim
+
+- link:
+    ~/.vim: vim/
+
+- shell:
+    - ["vim +PluginInstall +qall", Installing vim Plugins]
+    
+- link:
+    ~/.vimrc: vimrc
+
+# git
+- pacaur:
+    - git
+
+- link:
+  #git
+    ~/.gitignore: git/gitignore
+    ~/.gitconfig: git/gitconfig
+
+# wallpapers and background
+- pacaur:
+    - nitrogen
+    - feh
+
+- link:
+  #wallpapers
+    ~/wallpapers: wallpapers/

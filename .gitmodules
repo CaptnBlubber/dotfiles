@@ -14,3 +14,6 @@
 	path = ubersicht/polybar
 	url = https://github.com/CaptnBlubber/Polybar-kwm.git
 	branch = chunkwm
+[submodule "dotbot-pacaur"]
+	path = dotbot-pacaur
+	url = https://github.com/ajlende/dotbot-pacaur

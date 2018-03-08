@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+#TODO: Multi OS
+OS=$(uname)
+#CONFIG="$OS.conf.yaml"
+
+CONFIG="arch.conf.yaml"
+DOTBOT_DIR="dotbot"
+
+DOTBOT_BIN="bin/dotbot"
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${BASEDIR}"
+git submodule update --init --recursive "${DOTBOT_DIR}"
+
+#[[ "$OS" = "Darwin" ]] && 
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-pacaur -c "${CONFIG}" "${@}"

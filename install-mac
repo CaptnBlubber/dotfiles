@@ -6,7 +6,7 @@ set -e
 OS=$(uname)
 #CONFIG="$OS.conf.yaml"
 
-CONFIG="install.conf.yaml"
+CONFIG="mac.conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
