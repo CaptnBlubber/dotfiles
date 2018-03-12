@@ -42,12 +42,26 @@
 - pacaur:
         - i3-gaps
         - dmenu
-        - i3-blocks
+        - polybar
 
 - link:
         ~/.config/i3/config: i3/config
         ~/.i3: i3/
         ~/.config/rofi/config: rofi/config
+    
+# music
+- pacaur:
+        - mopidy
+        - mopidy-gmusic
+
+# polybar
+- pacaur:
+        - libmpdclient # !IMPORTANT! Install before installing polybar, otherwise MPD wont function
+        - polybar
+
+- link:
+         ~/.config/polybar: polybar/
+
 
 # terminal
 
@@ -76,15 +90,19 @@
     - git
 
 - link:
-  #git
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
 
 # wallpapers and background
 - pacaur:
-    - nitrogen
     - feh
 
 - link:
-  #wallpapers
     ~/wallpapers: wallpapers/
+
+- shell:
+  - ["feh --bg-max ~/wallpapers/breath_of_the_wild.jpg"]
+
+# android specific:
+- pacaur:
+    - android-studio

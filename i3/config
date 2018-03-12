@@ -183,23 +183,6 @@ client.focused_inactive     $magenta    $magenta        $silver         $magenta
 client.urgent               $acqua	$acqua	        $silver         $magenta
 client.placeholder          $magenta 	$magenta        $silver         $white
 
-# Start i3blocks to display a workspace bar
-bar
-{
-	position top
-	status_command i3blocks
-	font pango: SauceCodePro Nerd Font Black 10	
-	colors
-	{
-				    # Border	# Background	# Text
-		focused_workspace   $silver	$silver		$elegant
-		active_workspace    $elegant    $elegant        $orange
-		inactive_workspace  $elegant    $elegant       	$cyan
-		urgent_workspace    $wine    	$wine       	$silver
-		background          $elegant
-    	}
-}
-
 # i3-gaps
 gaps inner 6
 
@@ -207,3 +190,4 @@ gaps inner 6
 exec --no-startup-id nm-applet
 exec --no-startup-id compton -f
 exec --no-startup-id nitrogen --restore
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
