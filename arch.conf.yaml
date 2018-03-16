@@ -29,6 +29,14 @@
     ~/.zshrc: prezto/runcoms/zshrc
     ~/.zprezto-scripts: prezto-scripts/
 
+# Xbindkeys
+- pacaur:
+  - xbindkeys
+
+- link:
+  ~/.xbinkeysrc: xbindkeysrc
+
+
 # xorg
 
 - pacaur:
@@ -53,6 +61,12 @@
 - pacaur:
         - mopidy
         - mopidy-gmusic
+
+- link:
+    ~/.config/systemd/user/mopidy.service: mopidy/mopidy.service #This will automatically start mopidy as user service
+
+- shell:
+  - ["systemctl --user enable mopidy"]
 
 # polybar
 - pacaur:
