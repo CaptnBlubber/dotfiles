@@ -31,6 +31,7 @@
   #git
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
+    ~/.gitconfig.user: git/gitconfig.user
   #wallpapers
     ~/wallpapers: wallpapers/
 

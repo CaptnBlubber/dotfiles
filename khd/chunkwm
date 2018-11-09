@@ -1,36 +1,38 @@
 # Swap windows chunkwm
-cmd + shift - h           :   chunkc tiling::window --swap west
-cmd + shift - l           :   chunkc tiling::window --swap east
-cmd + shift - j           :   chunkc tiling::window --swap south
-cmd + shift - k           :   chunkc tiling::window --swap north
+lalt + shift - h           :   chunkc tiling::window --swap west
+lalt + shift - l           :   chunkc tiling::window --swap east
+lalt + shift - j           :   chunkc tiling::window --swap south
+lalt + shift - k           :   chunkc tiling::window --swap north
 
 # Give focus to windows chunkwm
-cmd - h                   :   chunkc tiling::window --focus west 
-cmd - l                   :   chunkc tiling::window --focus east
-cmd - j                   :   chunkc tiling::window --focus south
-cmd - k                   :   chunkc tiling::window --focus north
+lalt - h                   :   chunkc tiling::window --focus west 
+lalt - l                   :   chunkc tiling::window --focus east
+lalt - j                   :   chunkc tiling::window --focus south
+lalt - k                   :   chunkc tiling::window --focus north
 
 # NOTE: Workspace Switching is done through Mission Control now!
 
 # Send window to desktop chunkwm
-cmd + shift - 0           :   chunkc tiling::window --send-to-desktop 0
-cmd + shift - 1           :   chunkc tiling::window --send-to-desktop 1
-cmd + shift - 2           :   chunkc tiling::window --send-to-desktop 2 
-cmd + shift - 3           :   chunkc tiling::window --send-to-desktop 3
-cmd + shift - 4           :   chunkc tiling::window --send-to-desktop 4
-cmd + shift - 5           :   chunkc tiling::window --send-to-desktop 5
-cmd + shift - 6           :   chunkc tiling::window --send-to-desktop 6
-cmd + shift - 7           :   chunkc tiling::window --send-to-desktop 7
-cmd + shift - 8           :   chunkc tiling::window --send-to-desktop 8
-cmd + shift - 9           :   chunkc tiling::window --send-to-desktop 9
+lalt + shift - 0           :   chunkc tiling::window --send-to-desktop 0
+lalt + shift - 1           :   chunkc tiling::window --send-to-desktop 1
+lalt + shift - 2           :   chunkc tiling::window --send-to-desktop 2 
+lalt + shift - 3           :   chunkc tiling::window --send-to-desktop 3
+lalt + shift - 4           :   chunkc tiling::window --send-to-desktop 4
+lalt + shift - 5           :   chunkc tiling::window --send-to-desktop 5
+lalt + shift - 6           :   chunkc tiling::window --send-to-desktop 6
+lalt + shift - 7           :   chunkc tiling::window --send-to-desktop 7
+lalt + shift - 8           :   chunkc tiling::window --send-to-desktop 8
+lalt + shift - 9           :   chunkc tiling::window --send-to-desktop 9
 
 # Open new terminal window
-cmd - return        : open -nb com.googlecode.iterm2
+lalt - return        : open -nb com.googlecode.iterm2
 
 # equalize size of windows
-shift + alt - 0 : chunkc tiling::desktop --equalize
+#shift + alt - 0 : chunkc tiling::desktop --equalize
 
 # toggle window fullscreen
-cmd - f : chunkc tiling::window --toggle fullscreen
+lalt - f : chunkc tiling::window --toggle fullscreen
 
+# Mirror Default Mac Quit to work with the modifier key
+lalt - q : khd -p "cmd - q"
 

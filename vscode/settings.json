@@ -1,0 +1,17 @@
+{
+    
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "'SauceCodePro Nerd Font Medium', Droid Sans Mono', Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'",
+}

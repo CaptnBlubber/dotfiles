@@ -110,7 +110,7 @@
   default = upstream
 [core]
   ignoreCase = false
-  autocrlf = false
+	autocrlf = input
   editor = vim
 	excludesfile = ~/.gitignore
 [advice]
@@ -126,6 +126,8 @@
   enabled = true
 [include]
   path = .gitconfig.user
-[user]
-	email = s3xy4ngyc@googlemail.com
-	name = Angelo Rüggeberg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

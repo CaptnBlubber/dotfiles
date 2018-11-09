@@ -83,6 +83,10 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
+# Alias to delete all branches that have been merged locally
+alias gdmb='git branch --merged | egrep -v "(^\*|master|dev|development)" | xargs git branch -d'
+
+
 #
 # GNU Utility
 #
