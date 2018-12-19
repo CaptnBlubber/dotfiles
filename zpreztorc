@@ -234,6 +234,11 @@ zstyle ':prezto:module:prompt' theme 'powerlevel9k'
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
 
+# startx on login if not already running
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
+
 # Load all custom scripts
 if [ -d $HOME/.zprezto-scripts/ ]; then
   if [ "$(ls -A $HOME/.zprezto-scripts/)" ]; then

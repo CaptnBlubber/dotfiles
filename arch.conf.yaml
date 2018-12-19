@@ -28,6 +28,7 @@
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: prezto/runcoms/zshrc
     ~/.zprezto-scripts: prezto-scripts/
+    ~/.config/rofi: rofi/
 
 # Xbindkeys
 - pacaur:
@@ -51,11 +52,12 @@
         - i3-gaps
         - dmenu
         - polybar
+        - compton
 
 - link:
         ~/.config/i3/config: i3/config
         ~/.i3: i3/
-        ~/.config/rofi/config: rofi/config
+        ~/.config/compton.conf: compton/compton.conf
     
 # music
 - pacaur:
